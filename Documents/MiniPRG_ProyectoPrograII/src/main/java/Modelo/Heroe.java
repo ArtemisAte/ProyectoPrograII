@@ -4,37 +4,51 @@
  */
 package Modelo;
 
+import Modelo.Ataque;
+import Modelo.Enemigo;
+import Modelo.Personaje;
 import java.util.ArrayList;
 
 /**
  *
  * @author Athenea
  */
-public class Guerrero extends Personaje implements Ataque{
+public class Heroe extends Personaje implements Ataque{
     private int fuerzaExtra;
+    private String type;
     private ArrayList<Enemigo> listEnemigo;
     
 /**
  * 
  */
-    public Guerrero() {
+    public Heroe() {
         super ();
         this.fuerzaExtra = 0;
     }
 /**
  * 
  * @param fuerzaExtra
- * @param name
- * @param level
- * @param lives
- * @param history 
+ * @param nombre
+ * @param nivel
+ * @param vida
+ * @param historia
+ * @param score 
  */
-    public Guerrero(int fuerzaExtra, String name, int level, int lives, String history) {
-        super(name, level, lives, history);
+    public Heroe(int fuerzaExtra, String nombre, int nivel, int vida, String historia, int score, String type) {
+        super(nombre, nivel, vida, historia, score);
         this.fuerzaExtra = fuerzaExtra;
-        this.listEnemigo = new ArrayList<>();
+        this.type = type;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    
     public int getFuerzaExtra() {
         return fuerzaExtra;
     }
@@ -59,7 +73,7 @@ public class Guerrero extends Personaje implements Ataque{
     
    
     @Override
-    public void ataque(Enemigo enemy) {
+    public void usarHabilidad(Enemigo enemy) {
         for (Enemigo e : listEnemigo){
             if(e.equals(enemy)){
                  golgeFuerte(e);

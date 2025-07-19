@@ -18,8 +18,19 @@ public class Enemigo extends Personaje {
         this.force = 0;
     }
 
-    public Enemigo(String type, String name, int level, int lives, String history, int force) {
-        super(name, level, lives, history);
+  
+/**
+ * 
+ * @param type
+ * @param force
+ * @param nombre
+ * @param nivel
+ * @param vida
+ * @param historia
+ * @param score 
+ */
+    public Enemigo(String type, int force, String nombre, int nivel, int vida, String historia, int score) {
+        super(nombre, nivel, vida, historia, score);
         this.type = type;
         this.force = force;
     }
