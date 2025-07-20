@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author Athenea
  */
-public class Villano extends Personaje implements Ataque{
+public class Heroe extends Personaje implements Ataque{
     private int fuerzaExtra;
     private String type;
     private ArrayList<Enemigo> listEnemigo;
