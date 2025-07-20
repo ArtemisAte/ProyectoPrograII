@@ -21,7 +21,7 @@ public class Heroe extends Personaje implements Ataque{
 /**
  * 
  */
-    public Villano() {
+    public Heroe() {
         super ();
         this.fuerzaExtra = 0;
     }
@@ -34,7 +34,7 @@ public class Heroe extends Personaje implements Ataque{
  * @param historia
  * @param score 
  */
-    public Villano(int fuerzaExtra, String nombre, int nivel, int vida, String historia, int score, String type) {
+    public Heroe(int fuerzaExtra, String nombre, int nivel, int vida, String historia, int score, String type) {
         super(nombre, nivel, vida, historia, score);
         this.fuerzaExtra = fuerzaExtra;
         this.type = type;
